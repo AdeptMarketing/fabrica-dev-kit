@@ -200,7 +200,7 @@ end
 
 # run our gulp build task and build the WordPress theme
 echo 'Building WordPress theme...'
-system 'gulp build'
+system '../www/wp-content/themes/#{settings['slug']}/node_modules/.bin/gulp build'
 # create symlink to theme folder for quick access
 FileUtils.ln_s "../www/wp-content/themes/#{settings['slug']}/", 'build'
 # activate theme
